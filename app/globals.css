@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { background: #F7F5EF; color: #191C1A; }
+::selection { background: #C9A24B; color: #191C1A; }
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-7xl px-6 md:px-10; }
+  .eyebrow { @apply text-[10px] font-semibold uppercase tracking-[0.25em] text-gold; }
+  .heading { @apply font-display text-4xl leading-tight md:text-5xl; }
+  .button { @apply inline-flex items-center justify-center gap-3 border border-gold bg-gold px-6 py-3.5 text-xs font-semibold tracking-wide text-charcoal transition duration-300 hover:bg-[#dab75e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold; }
+  .field { @apply mt-2 w-full rounded-none border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal outline-none transition focus:border-gold focus:ring-1 focus:ring-gold; }
+}
+a:focus-visible { outline: 2px solid #C9A24B; outline-offset: 5px; }
+input, select, textarea { color-scheme: light; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
